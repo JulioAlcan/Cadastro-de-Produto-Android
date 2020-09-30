@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="93dp"
+        android:layout_margin="20sp"
+        android:gravity="center"
+        android:text="Cadastro de produtos"
+        android:textSize="25sp" />
+
+
+    <EditText
+        android:id="@+id/txtNomeProd"
+        android:layout_width="match_parent"
+        android:layout_height="137dp"
+        android:layout_weight="1"
+        android:gravity="start|top"
+        android:hint="Nome do produto"
+        android:inputType="textMultiLine"
+        android:padding="20sp"
+        android:scrollbars="vertical" />
+    <EditText
+        android:id="@+id/txtValorCompra"
+        android:layout_width="match_parent"
+        android:layout_height="113dp"
+        android:layout_weight="1"
+        android:gravity="start|top"
+        android:hint="Valor da compra"
+        android:inputType="textMultiLine"
+        android:padding="20sp"
+        android:scrollbars="vertical" />
+
+    <EditText
+        android:id="@+id/txtValorVenda"
+        android:layout_width="match_parent"
+        android:layout_height="99dp"
+        android:layout_weight="1"
+        android:gravity="start|top"
+        android:hint="Valor da venda"
+        android:inputType="textMultiLine"
+        android:padding="20sp"
+        android:scrollbars="vertical" />/>
+
+    <EditText
+        android:id="@+id/txtPesq"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Digite um nome para salvar o produto"
+        android:padding="10sp" />
+
+    <TextView
+        android:id="@+id/txtLucro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Lucro / Prejuízo"
+        android:gravity="center"
+        android:layout_margin="20sp"
+        android:textSize="20sp"/>
+
+    <Button
+        android:id="@+id/btLimpar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10sp"
+        android:text="Limpar"/>
+
+    <Button
+        android:id="@+id/btSalvar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10sp"
+        android:text="Salvar"/>
+
+    <Button
+        android:id="@+id/btAbrir"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10sp"
+        android:text="Abrir"/>
+
+    <Button
+        android:id="@+id/btCalc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10sp"
+        android:text="Calcular lucro / prejuízo"
+        android:clickable="false"/>
+
+
+</LinearLayout>
