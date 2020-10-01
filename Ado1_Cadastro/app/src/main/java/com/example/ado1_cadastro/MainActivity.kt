@@ -43,17 +43,21 @@ class MainActivity : AppCompatActivity() {
         }
 
         btCalc.setOnClickListener { v: View? ->
-            var custo = txtValorCompra.text.toString().toDouble();
-            var venda = txtValorVenda.text.toString().toDouble();
+            if(txtValorVenda.text.isNotEmpty() && txtValorCompra.text.isNotEmpty()) {
+                var custo = txtValorCompra.text.toString().toDouble();
+                var venda = txtValorVenda.text.toString().toDouble();
 
-            if(custo>venda){
-                txtLucro.setText("Houve um prejuízo de -R$"+(venda-custo))
-                txtLucro.setTextColor(Color.parseColor("#b51616"))
-            }else if(custo<venda){
-                txtLucro.setText("Houve um lucro de +R$"+(venda-custo))
-                txtLucro.setTextColor(Color.parseColor("#1e9e19"))
+                if (custo > venda) {
+                    txtLucro.setText("Houve um prejuízo de -R$" + (venda - custo))
+                    txtLucro.setTextColor(Color.parseColor("#b51616"))
+                } else if (custo < venda) {
+                    txtLucro.setText("Houve um lucro de +R$" + (venda - custo))
+                    txtLucro.setTextColor(Color.parseColor("#1e9e19"))
+                } else {
+                    txtLucro.setText("Não houve lucro nem prejuízo")
+                }
             }else{
-                txtLucro.setText("Não houve lucro nem prejuízo")
+                Toast.makeText(this,"Não foi possível calcular.",Toast.LENGTH_SHORT).show()
             }
         }
 
